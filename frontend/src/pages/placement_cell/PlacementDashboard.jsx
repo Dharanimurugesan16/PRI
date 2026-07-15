@@ -1,32 +1,23 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 
 const PlacementDashboard = () => {
 
-
+    const navigate = useNavigate();
     return (
 
         <div className="min-h-screen bg-gray-100 p-8">
-
-
             <h1 className="text-3xl font-bold text-gray-800">
                 Placement Cell Dashboard
             </h1>
-
 
             <p className="text-gray-600 mt-2">
                 Monitor student placement preparation and manage placement activities.
             </p>
 
-
-
             {/* Statistics Cards */}
-
             <div className="grid md:grid-cols-4 gap-6 mt-8">
-
-
                 <div className="bg-white rounded-xl shadow p-6">
-
                     <h3 className="text-gray-500">
                         Total Students
                     </h3>
@@ -40,8 +31,6 @@ const PlacementDashboard = () => {
                     </p>
 
                 </div>
-
-
 
                 <div className="bg-white rounded-xl shadow p-6">
 
@@ -59,11 +48,7 @@ const PlacementDashboard = () => {
 
                 </div>
 
-
-
-
                 <div className="bg-white rounded-xl shadow p-6">
-
                     <h3 className="text-gray-500">
                         Training Required
                     </h3>
@@ -75,14 +60,9 @@ const PlacementDashboard = () => {
                     <p className="text-sm text-gray-500 mt-2">
                         Students need improvement
                     </p>
-
                 </div>
 
-
-
-
                 <div className="bg-white rounded-xl shadow p-6">
-
                     <h3 className="text-gray-500">
                         Placement Reports
                     </h3>
@@ -90,34 +70,20 @@ const PlacementDashboard = () => {
                     <h2 className="text-3xl font-bold text-purple-600 mt-2">
                         50
                     </h2>
-
                     <p className="text-sm text-gray-500 mt-2">
                         Reports generated
                     </p>
-
                 </div>
-
-
             </div>
 
-
-
-
-
             {/* Placement Controls */}
-
             <div className="bg-white rounded-xl shadow p-6 mt-10">
-
 
                 <h2 className="text-xl font-bold text-gray-800 mb-5">
                     Placement Cell Controls
                 </h2>
 
-
-
                 <div className="flex flex-wrap gap-4">
-
-
                     <button
                         className="
                         bg-blue-600
@@ -127,11 +93,10 @@ const PlacementDashboard = () => {
                         rounded-lg
                         hover:bg-blue-700
                         "
+                        onClick={() => navigate("/placement/aptitude-tests/publish")}
                     >
                         Create Assessment
                     </button>
-
-
 
                     <button
                         className="
@@ -146,9 +111,6 @@ const PlacementDashboard = () => {
                         Monitor Students
                     </button>
 
-
-
-
                     <button
                         className="
                         bg-purple-600
@@ -162,9 +124,6 @@ const PlacementDashboard = () => {
                         Department Statistics
                     </button>
 
-
-
-
                     <button
                         className="
                         bg-gray-800
@@ -177,25 +136,13 @@ const PlacementDashboard = () => {
                     >
                         Generate Reports
                     </button>
-
-
                 </div>
-
-
             </div>
 
-
-
-
-
-
             {/* Student Performance Section */}
-
             <div className="grid md:grid-cols-3 gap-6 mt-10">
 
-
                 <div className="bg-white shadow rounded-xl p-6">
-
                     <h3 className="font-bold text-lg">
                         Technical Assessment
                     </h3>
@@ -203,13 +150,9 @@ const PlacementDashboard = () => {
                     <p className="text-gray-600 mt-2">
                         Create and evaluate coding and technical tests.
                     </p>
-
                 </div>
 
-
-
                 <div className="bg-white shadow rounded-xl p-6">
-
                     <h3 className="font-bold text-lg">
                         Aptitude Training
                     </h3>
@@ -217,14 +160,9 @@ const PlacementDashboard = () => {
                     <p className="text-gray-600 mt-2">
                         Track aptitude improvement and performance.
                     </p>
-
                 </div>
 
-
-
-
                 <div className="bg-white shadow rounded-xl p-6">
-
                     <h3 className="font-bold text-lg">
                         Resume Review
                     </h3>
@@ -232,19 +170,11 @@ const PlacementDashboard = () => {
                     <p className="text-gray-600 mt-2">
                         Review resumes and provide feedback.
                     </p>
-
                 </div>
-
-
             </div>
 
-
-
         </div>
-
     );
-
 };
-
 
 export default PlacementDashboard;

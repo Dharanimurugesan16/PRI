@@ -83,6 +83,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
+import com.example.demo.Service.CustomUserDetailsService;
+import com.example.demo.security.JwtUtil;
+import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 
 import java.io.IOException;
 
@@ -130,6 +133,9 @@ public class JwtFilter extends OncePerRequestFilter {
                                     null,
                                     userDetails.getAuthorities()
                             );
+
+                    authentication.setDetails(
+                            new WebAuthenticationDetailsSource().buildDetails(request));
 
                     SecurityContextHolder.getContext()
                             .setAuthentication(authentication);

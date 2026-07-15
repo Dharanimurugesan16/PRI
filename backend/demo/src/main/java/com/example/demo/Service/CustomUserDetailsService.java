@@ -1,4 +1,5 @@
-package com.example.demo.security;
+// package com.example.demo.security;
+package com.example.demo.Service;
 
 import com.example.demo.entity.User;
 import com.example.demo.repository.UserRepository;
